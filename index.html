@@ -486,147 +486,8 @@
             color: #ffc107;
         }
 
-        /* Advanced Search Section */
-        .search-section {
-            padding: 6rem 0;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            position: relative;
-        }
-
-        .search-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            text-align: center;
-            padding: 0 2rem;
-        }
-
-        .search-container h2 {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            background: var(--primary-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .search-container p {
-            font-size: 1.2rem;
-            color: var(--text-secondary);
-            margin-bottom: 3rem;
-        }
-
-        .search-form {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 30px;
-            box-shadow: 0 25px 80px rgba(0,0,0,0.1);
-            margin-top: 2rem;
-            border: 1px solid var(--border-light);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .search-form::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--primary-gradient);
-        }
-
-        .search-grid {
-            display: grid;
-            grid-template-columns: 1.5fr 1fr auto;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-            align-items: end;
-        }
-
-        .input-group {
-            position: relative;
-        }
-
-        .input-label {
-            display: block;
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--text-secondary);
-            margin-bottom: 0.5rem;
-            text-align: left;
-        }
-
-        .search-input {
-            width: 100%;
-            padding: 1.2rem 1.8rem;
-            border: 2px solid #e9ecef;
-            border-radius: 20px;
-            font-size: 1.1rem;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            background: #f8f9fa;
-            font-weight: 500;
-        }
-
-        .search-input:focus {
-            outline: none;
-            border-color: #667eea;
-            background: white;
-            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
-            transform: translateY(-2px);
-        }
-
-        .search-btn {
-            padding: 1.2rem 3rem;
-            background: var(--primary-gradient);
-            color: white;
-            border: none;
-            border-radius: 20px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            font-size: 1.1rem;
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
-        }
-
-        .search-btn:hover:not(:disabled) {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
-        }
-
-        .search-btn:disabled {
-            opacity: 0.7;
-            cursor: not-allowed;
-        }
-
-        .popular-searches {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .popular-tag {
-            padding: 0.5rem 1.2rem;
-            background: rgba(102, 126, 234, 0.1);
-            color: #667eea;
-            border-radius: 25px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(102, 126, 234, 0.2);
-        }
-
-        .popular-tag:hover {
-            background: #667eea;
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        /* Premium Categories */
-        .categories {
+        /* About Section */
+        .about {
             padding: 8rem 0;
             background: white;
             position: relative;
@@ -656,6 +517,209 @@
             max-width: 700px;
             margin: 0 auto;
             line-height: 1.8;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--text-primary);
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 20px;
+            background: #f8f9fa;
+            transition: all 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .feature h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .feature p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 8rem 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: start;
+        }
+
+        .contact-info h3 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--text-primary);
+        }
+
+        .contact-info p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 3rem;
+        }
+
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .contact-method:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .contact-method-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .contact-method-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .contact-method-info p {
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 3rem;
+            border-radius: 25px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border: 2px solid #e9ecef;
+            border-radius: 15px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: #f8f9fa;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1.2rem;
+            background: var(--primary-gradient);
+            color: white;
+            border: none;
+            border-radius: 15px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Premium Categories */
+        .categories {
+            padding: 8rem 0;
+            background: white;
+            position: relative;
         }
 
         .categories-grid {
@@ -1190,11 +1254,6 @@
                 font-size: 2.8rem;
             }
 
-            .search-grid {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-
             .hero-cta {
                 justify-content: center;
             }
@@ -1217,6 +1276,16 @@
 
             .social-links {
                 justify-content: center;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .about-features {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -1374,7 +1443,7 @@
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="logo" onclick="window.location.href='/'">Sewa</div>
+            <div class="logo" onclick="window.location.href='index.html'">Sewa</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
@@ -1383,8 +1452,8 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="cta-buttons">
-                <a href="#" class="btn btn-outline" onclick="handleLogin()">Login</a>
-                <a href="#" class="btn btn-primary" onclick="handleRegister()">Get Started</a>
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="register.html" class="btn btn-primary">Get Started</a>
             </div>
             <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
                 <i class="fas fa-bars"></i>
@@ -1400,8 +1469,8 @@
                     <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
                 </ul>
                 <div class="mobile-cta-buttons">
-                    <a href="#" class="btn btn-outline" onclick="handleLogin()">Login</a>
-                    <a href="#" class="btn btn-primary" onclick="handleRegister()">Get Started</a>
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="register.html" class="btn btn-primary">Get Started</a>
                 </div>
             </div>
         </div>
@@ -1426,10 +1495,10 @@
                 <p>Connect with verified professionals for all your service needs. From home repairs to personal care, we've revolutionized how you find and book trusted experts in your area.</p>
                 
                 <div class="hero-cta">
-                    <a href="#" class="btn-hero btn-hero-primary" onclick="handleFindServices()">
+                    <a href="#services" class="btn-hero btn-hero-primary">
                         <i class="fas fa-search"></i> Find Services
                     </a>
-                    <a href="#" class="btn-hero btn-hero-secondary" onclick="handleJoinProvider()">
+                    <a href="register.html" class="btn-hero btn-hero-secondary">
                         <i class="fas fa-plus-circle"></i> Join as Provider
                     </a>
                 </div>
@@ -1545,43 +1614,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Advanced Search Section -->
-    <section class="search-section">
-        <div class="search-container">
-            <h2>What service do you need today?</h2>
-            <p>Search from thousands of verified professionals ready to serve you</p>
-            
-            <form class="search-form" onsubmit="handleSearch(event)">
-                <div class="search-grid">
-                    <div class="input-group">
-                        <label class="input-label">Service Type</label>
-                        <input type="text" name="service" class="search-input" placeholder="e.g., House cleaning, Car repair..." required>
-                    </div>
-                    <div class="input-group">
-                        <label class="input-label">Location</label>
-                        <input type="text" name="location" class="search-input" placeholder="Your city or area">
-                    </div>
-                    <button type="submit" class="search-btn" id="searchBtn">
-                        <i class="fas fa-search"></i> Search Now
-                    </button>
-                </div>
-                
-                <div class="popular-searches">
-                    <span style="color: #666; font-weight: 600; margin-right: 1rem;">Popular:</span>
-                    <div class="popular-tag" onclick="quickSearch('house cleaning')">House Cleaning</div>
-                    <div class="popular-tag" onclick="quickSearch('plumbing')">Plumbing</div>
-                    <div class="popular-tag" onclick="quickSearch('tutoring')">Tutoring</div>
-                    <div class="popular-tag" onclick="quickSearch('massage')">Massage</div>
-                    <div class="popular-tag" onclick="quickSearch('car wash')">Car Wash</div>
-                </div>
-                
-                <div class="success-message" id="searchSuccess">
-                    <i class="fas fa-check-circle"></i> Searching for the best providers in your area...
-                </div>
-            </form>
         </div>
     </section>
 
@@ -1723,6 +1755,153 @@
         </div>
     </section>
 
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Sewa</h2>
+                <p>Revolutionizing the service industry with trust, quality, and innovation at our core</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Mission</h3>
+                    <p>At Sewa, we're on a mission to transform how people access and deliver services. We believe everyone deserves access to quality, reliable services while providing service providers with the tools and platform they need to grow their business.</p>
+                    
+                    <p>Founded in 2020, we've grown from a small startup to the world's leading service marketplace, connecting millions of customers with trusted professionals across hundreds of service categories.</p>
+                    
+                    <p>Our commitment to excellence, security, and customer satisfaction has made us the preferred choice for both service seekers and providers worldwide.</p>
+                </div>
+
+                <div class="about-features">
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-check"></i>
+                        </div>
+                        <h4>Verified Professionals</h4>
+                        <p>Every service provider undergoes thorough background checks and verification</p>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>Quality Guarantee</h4>
+                        <p>We ensure exceptional service quality with our satisfaction guarantee program</p>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h4>24/7 Support</h4>
+                        <p>Round-the-clock customer support to assist you whenever you need help</p>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h4>Secure Platform</h4>
+                        <p>Advanced security measures protect your data and payment information</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Have questions or need assistance? We're here to help you every step of the way</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>We're always ready to assist you with any questions, concerns, or feedback. Choose the method that works best for you.</p>
+
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-method-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-method-info">
+                                <h4>Phone Support</h4>
+                                <p>+1 (555) 123-4567</p>
+                                <p>Available 24/7</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="contact-method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-method-info">
+                                <h4>Email Support</h4>
+                                <p>help@sewa.com</p>
+                                <p>Response within 2 hours</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="contact-method-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-method-info">
+                                <h4>Office Address</h4>
+                                <p>123 Innovation Street</p>
+                                <p>San Francisco, CA 94105</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="contact-method-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <div class="contact-method-info">
+                                <h4>Live Chat</h4>
+                                <p>Available on our website</p>
+                                <p>Instant responses</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <form onsubmit="handleContactForm(event)">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required placeholder="Tell us how we can help you..."></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Ultimate CTA Section -->
     <section class="cta-section">
         <div class="container">
@@ -1731,10 +1910,10 @@
                 <p>Join over 50,000 satisfied customers who trust Sewa for their premium service needs. Start your journey today!</p>
                 
                 <div class="cta-buttons-section">
-                    <a href="#" class="btn-cta btn-cta-primary" onclick="handleFindServices()">
+                    <a href="#services" class="btn-cta btn-cta-primary">
                         <i class="fas fa-rocket"></i> Find Services Now
                     </a>
-                    <a href="#" class="btn-cta btn-cta-secondary" onclick="handleJoinProvider()">
+                    <a href="register.html" class="btn-cta btn-cta-secondary">
                         <i class="fas fa-handshake"></i> Become a Provider
                     </a>
                 </div>
@@ -1787,42 +1966,42 @@
 
                 <div class="footer-section">
                     <h3>For Customers</h3>
-                    <a href="#" onclick="handleBrowseServices()">Browse All Services</a>
+                    <a href="#services">Browse All Services</a>
                     <a href="#how-it-works">How It Works</a>
-                    <a href="#" onclick="handleLogin()">My Bookings</a>
-                    <a href="#" onclick="handleCustomerSupport()">Customer Support</a>
-                    <a href="#" onclick="handleHelp()">Help Center</a>
-                    <a href="#" onclick="handleDownloadApp()">Mobile App</a>
+                    <a href="login.html">My Bookings</a>
+                    <a href="#contact">Customer Support</a>
+                    <a href="#contact">Help Center</a>
+                    <a href="#">Mobile App</a>
                 </div>
 
                 <div class="footer-section">
                     <h3>For Providers</h3>
-                    <a href="#" onclick="handleJoinProvider()">Become a Provider</a>
-                    <a href="#" onclick="handleProviderLogin()">Provider Dashboard</a>
-                    <a href="#" onclick="handleProviderResources()">Resources & Tools</a>
-                    <a href="#" onclick="handleProviderSupport()">Provider Support</a>
-                    <a href="#" onclick="handleProviderApp()">Provider App</a>
-                    <a href="#" onclick="handleSuccess()">Success Stories</a>
+                    <a href="register.html">Become a Provider</a>
+                    <a href="login.html">Provider Dashboard</a>
+                    <a href="#">Resources & Tools</a>
+                    <a href="#contact">Provider Support</a>
+                    <a href="#">Provider App</a>
+                    <a href="#">Success Stories</a>
                 </div>
 
                 <div class="footer-section">
                     <h3>Company</h3>
                     <a href="#about">About Sewa</a>
-                    <a href="#" onclick="handleCareers()">Careers</a>
-                    <a href="#" onclick="handlePress()">Press & Media</a>
-                    <a href="#" onclick="handleInvestors()">Investors</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Press & Media</a>
+                    <a href="#">Investors</a>
                     <a href="#contact">Contact Us</a>
-                    <a href="#" onclick="handleBlog()">Blog</a>
+                    <a href="#">Blog</a>
                 </div>
             </div>
 
             <div class="footer-bottom">
                 <p>&copy; 2025 Sewa Technologies. All rights reserved worldwide.</p>
                 <p>
-                    <a href="#" onclick="handlePrivacy()">Privacy Policy</a> | 
-                    <a href="#" onclick="handleTerms()">Terms of Service</a> | 
-                    <a href="#" onclick="handleCookies()">Cookie Policy</a> | 
-                    <a href="#" onclick="handleAccessibility()">Accessibility</a>
+                    <a href="#">Privacy Policy</a> | 
+                    <a href="#">Terms of Service</a> | 
+                    <a href="#">Cookie Policy</a> | 
+                    <a href="#">Accessibility</a>
                 </p>
             </div>
         </div>
@@ -1895,163 +2074,42 @@
             menuBtn.classList.add('fa-bars');
         }
 
-        // Enhanced Search Functionality
-        function handleSearch(event) {
-            event.preventDefault();
-            
-            const searchBtn = document.getElementById('searchBtn');
-            const successMsg = document.getElementById('searchSuccess');
-            const formData = new FormData(event.target);
-            
-            const service = formData.get('service');
-            const location = formData.get('location');
-            
-            // Show loading state
-            searchBtn.disabled = true;
-            searchBtn.innerHTML = '<div class="loading"></div> Searching...';
-            successMsg.classList.add('show');
-            
-            // Simulate search process
-            setTimeout(() => {
-                // Redirect to search results with parameters
-                const searchParams = new URLSearchParams({
-                    service: service,
-                    location: location || 'all'
-                });
-                
-                // In a real app, this would go to your search results page
-                window.location.href = `/search?${searchParams.toString()}`;
-            }, 2000);
-        }
-
-        function quickSearch(query) {
-            const serviceInput = document.querySelector('input[name="service"]');
-            serviceInput.value = query;
-            serviceInput.focus();
-            
-            // Auto-trigger search after a brief delay
-            setTimeout(() => {
-                document.querySelector('.search-form').dispatchEvent(new Event('submit', { cancelable: true }));
-            }, 500);
-        }
-
-        // Main Navigation Functions - These handle the actual routing
-        function handleLogin() {
-            // Show loading state
-            showNotification('Redirecting to login...', 'info');
-            
-            // Simulate redirect delay for better UX
-            setTimeout(() => {
-                // In your Flask app, this should redirect to /login route from auth.py
-                window.location.href = '/login';
-            }, 500);
-        }
-
-        function handleRegister() {
-            showNotification('Redirecting to registration...', 'info');
-            setTimeout(() => {
-                // Redirects to /register route from auth.py
-                window.location.href = '/register';
-            }, 500);
-        }
-
-        function handleFindServices() {
-            showNotification('Loading service categories...', 'info');
-            setTimeout(() => {
-                // Redirects to providers list from customer.py routes
-                window.location.href = '/providers';
-            }, 500);
-        }
-
-        function handleJoinProvider() {
-            showNotification('Opening provider registration...', 'success');
-            setTimeout(() => {
-                // Redirects to provider registration from provider.py routes
-                window.location.href = '/provider/register';
-            }, 500);
-        }
-
         // Category Navigation Functions
         function exploreCategory(category) {
             showNotification(`Loading ${category.replace('-', ' ')} services...`, 'info');
             setTimeout(() => {
-                // Redirects to filtered providers list
-                window.location.href = `/providers?category=${category}`;
+                // In a real app, this would redirect to services page with category filter
+                window.location.href = `services.html?category=${category}`;
             }, 500);
         }
 
-        function searchCategory(category) {
-            // Same as exploreCategory but with different UX feedback
-            exploreCategory(category);
-        }
-
-        // Footer Navigation Functions
-        function handleBrowseServices() {
-            window.location.href = '/providers';
-        }
-
-        function handleCustomerSupport() {
-            window.location.href = '/support';
-        }
-
-        function handleHelp() {
-            window.location.href = '/help';
-        }
-
-        function handleDownloadApp() {
-            showNotification('Mobile app coming soon!', 'info');
-        }
-
-        function handleProviderLogin() {
-            window.location.href = '/provider/login';
-        }
-
-        function handleProviderSupport() {
-            window.location.href = '/provider/support';
-        }
-
-        function handleProviderResources() {
-            window.location.href = '/provider/resources';
-        }
-
-        function handleProviderApp() {
-            showNotification('Provider mobile app launching soon!', 'info');
-        }
-
-        function handleSuccess() {
-            window.location.href = '/success-stories';
-        }
-
-        function handleCareers() {
-            window.location.href = '/careers';
-        }
-
-        function handlePress() {
-            window.location.href = '/press';
-        }
-
-        function handleInvestors() {
-            window.location.href = '/investors';
-        }
-
-        function handleBlog() {
-            window.location.href = '/blog';
-        }
-
-        function handlePrivacy() {
-            window.location.href = '/privacy';
-        }
-
-        function handleTerms() {
-            window.location.href = '/terms';
-        }
-
-        function handleCookies() {
-            window.location.href = '/cookies';
-        }
-
-        function handleAccessibility() {
-            window.location.href = '/accessibility';
+        // Contact Form Handler
+        function handleContactForm(event) {
+            event.preventDefault();
+            
+            const submitBtn = event.target.querySelector('.submit-btn');
+            const originalText = submitBtn.innerHTML;
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<div class="loading"></div> Sending Message...';
+            
+            // Get form data
+            const formData = new FormData(event.target);
+            const contactData = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                subject: formData.get('subject'),
+                message: formData.get('message')
+            };
+            
+            // Simulate sending message
+            setTimeout(() => {
+                showNotification('Message sent successfully! We\'ll get back to you within 24 hours.', 'success');
+                event.target.reset();
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+            }, 2000);
         }
 
         // Enhanced Statistics Counter Animation
@@ -2101,29 +2159,8 @@
         }, observerOptions);
 
         // Observe elements for animation
-        document.querySelectorAll('.category-card, .step, .service-preview, .hero-stats').forEach(el => {
+        document.querySelectorAll('.category-card, .step, .service-preview, .hero-stats, .feature').forEach(el => {
             observer.observe(el);
-        });
-
-        // Enhanced Form Interactions
-        document.querySelectorAll('.search-input').forEach(input => {
-            input.addEventListener('focus', function() {
-                this.parentElement.style.transform = 'scale(1.02)';
-                this.parentElement.style.transition = 'transform 0.3s ease';
-            });
-            
-            input.addEventListener('blur', function() {
-                this.parentElement.style.transform = 'scale(1)';
-            });
-
-            // Add real-time validation
-            input.addEventListener('input', function() {
-                if (this.value.length > 0) {
-                    this.style.borderColor = '#28a745';
-                } else {
-                    this.style.borderColor = '#e9ecef';
-                }
-            });
         });
 
         // Notification System
@@ -2217,126 +2254,6 @@
         `;
         document.head.appendChild(notificationStyles);
 
-        // Enhanced Category Card Interactions
-        document.querySelectorAll('.category-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-15px) scale(1.03)';
-                // Add subtle glow effect
-                this.style.boxShadow = '0 25px 80px rgba(102, 126, 234, 0.25)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1)';
-                this.style.boxShadow = '0 10px 40px rgba(0,0,0,0.08)';
-            });
-        });
-
-        // Service Preview Card Interactions
-        document.querySelectorAll('.service-preview').forEach(card => {
-            card.addEventListener('click', function() {
-                const serviceName = this.querySelector('h3').textContent;
-                showNotification(`Exploring ${serviceName} providers...`, 'info');
-                setTimeout(() => {
-                    const categoryMap = {
-                        'Home Services': 'home-services',
-                        'Beauty & Wellness': 'beauty-wellness',
-                        'Automotive': 'automotive',
-                        'Education': 'education'
-                    };
-                    const category = categoryMap[serviceName] || 'all';
-                    window.location.href = `/providers?category=${category}`;
-                }, 500);
-            });
-        });
-
-        // Parallax Effects
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const parallaxElements = document.querySelectorAll('.hero-floating-elements');
-            
-            parallaxElements.forEach(element => {
-                const speed = 0.5;
-                element.style.transform = `translateY(${scrolled * speed}px)`;
-            });
-        });
-
-        // Typing Effect for Hero Title
-        function typeWriter(element, text, speed = 50) {
-            let i = 0;
-            element.innerHTML = '';
-            
-            function type() {
-                if (i < text.length) {
-                    if (text.charAt(i) === '<') {
-                        // Handle HTML tags
-                        let tagEnd = text.indexOf('>', i);
-                        element.innerHTML += text.substring(i, tagEnd + 1);
-                        i = tagEnd + 1;
-                    } else {
-                        element.innerHTML += text.charAt(i);
-                        i++;
-                    }
-                    setTimeout(type, speed);
-                }
-            }
-            
-            type();
-        }
-
-        // Initialize Typing Effect
-        window.addEventListener('load', () => {
-            const heroTitle = document.querySelector('.hero-content h1');
-            const originalText = heroTitle.innerHTML;
-            setTimeout(() => {
-                typeWriter(heroTitle, originalText, 80);
-            }, 1000);
-        });
-
-        // Click Tracking for Analytics
-        document.querySelectorAll('.btn, .category-card, .service-preview').forEach(element => {
-            element.addEventListener('click', function() {
-                const elementText = this.textContent || this.querySelector('h3')?.textContent || 'Unknown';
-                console.log('User interaction:', {
-                    element: elementText,
-                    timestamp: new Date().toISOString(),
-                    page: window.location.pathname
-                });
-                
-                // In a real app, you'd send this to your analytics service
-                // analytics.track('element_clicked', { element: elementText });
-            });
-        });
-
-        // Performance Monitoring
-        window.addEventListener('load', () => {
-            const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
-            console.log('Page load time:', loadTime + 'ms');
-            
-            // Track performance metrics
-            if (loadTime > 3000) {
-                console.warn('Page load time is slower than expected');
-            }
-        });
-
-        // Enhanced Error Handling
-        window.addEventListener('error', (e) => {
-            console.error('JavaScript error:', e.error);
-            showNotification('Something went wrong. Please refresh the page.', 'error');
-        });
-
-        // Service Worker Registration (for PWA functionality)
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js')
-                    .then(registration => {
-                        console.log('SW registered: ', registration);
-                    })
-                    .catch(registrationError => {
-                        console.log('SW registration failed: ', registrationError);
-                    });
-            });
-        }
-
         // Initialize everything when DOM is loaded
         document.addEventListener('DOMContentLoaded', () => {
             // Add staggered animation delays to category cards
@@ -2363,40 +2280,6 @@
             if (e.key === 'Escape' && isMenuOpen) {
                 closeMobileMenu();
             }
-        });
-
-        // Focus Management for Accessibility
-        document.querySelectorAll('.btn, .category-card').forEach(element => {
-            element.addEventListener('focus', function() {
-                this.style.outline = '3px solid rgba(102, 126, 234, 0.5)';
-                this.style.outlineOffset = '2px';
-            });
-            
-            element.addEventListener('blur', function() {
-                this.style.outline = 'none';
-            });
-        });
-
-        // Auto-save user preferences (dark mode, language, etc.)
-        function saveUserPreference(key, value) {
-            try {
-                // In a real app, this would be stored in your backend
-                // For now, we'll use a simple object to store during session
-                window.userPreferences = window.userPreferences || {};
-                window.userPreferences[key] = value;
-                console.log('Preference saved:', key, value);
-            } catch (error) {
-                console.error('Failed to save user preference:', error);
-            }
-        }
-
-        // Print-friendly styles
-        window.addEventListener('beforeprint', () => {
-            document.body.classList.add('printing');
-        });
-
-        window.addEventListener('afterprint', () => {
-            document.body.classList.remove('printing');
         });
 
         console.log('🚀 Sewa - Premium Service Marketplace loaded successfully!');
