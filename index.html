@@ -89,6 +89,7 @@
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             padding: 0.5rem 0;
+            cursor: pointer;
         }
 
         .nav-links a::after {
@@ -486,13 +487,6 @@
             color: #ffc107;
         }
 
-        /* About Section */
-        .about {
-            padding: 8rem 0;
-            background: white;
-            position: relative;
-        }
-
         .container {
             max-width: 1400px;
             margin: 0 auto;
@@ -517,70 +511,6 @@
             max-width: 700px;
             margin: 0 auto;
             line-height: 1.8;
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
-            align-items: center;
-        }
-
-        .about-text h3 {
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            color: var(--text-primary);
-        }
-
-        .about-text p {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            line-height: 1.8;
-            margin-bottom: 2rem;
-        }
-
-        .about-features {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .feature {
-            text-align: center;
-            padding: 2rem;
-            border-radius: 20px;
-            background: #f8f9fa;
-            transition: all 0.3s ease;
-        }
-
-        .feature:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-        }
-
-        .feature-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--primary-gradient);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1rem;
-            color: white;
-            font-size: 1.5rem;
-        }
-
-        .feature h4 {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-        }
-
-        .feature p {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
         }
 
         /* Contact Section */
@@ -1216,6 +1146,7 @@
             display: block;
             padding: 0.5rem 0;
             border-bottom: 1px solid #eee;
+            cursor: pointer;
         }
 
         .mobile-cta-buttons {
@@ -1278,14 +1209,9 @@
                 justify-content: center;
             }
 
-            .about-content,
             .contact-content {
                 grid-template-columns: 1fr;
                 gap: 3rem;
-            }
-
-            .about-features {
-                grid-template-columns: 1fr;
             }
         }
 
@@ -1443,13 +1369,12 @@
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="logo" onclick="window.location.href='index.html'">Sewa</div>
+            <div class="logo" onclick="window.location.href='#'">Sewa</div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#how-it-works">How it Works</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a onclick="scrollToSection('home')">Home</a></li>
+                <li><a onclick="scrollToSection('services')">Services</a></li>
+                <li><a onclick="scrollToSection('how-it-works')">How it Works</a></li>
+                <li><a onclick="scrollToSection('contact')">Contact</a></li>
             </ul>
             <div class="cta-buttons">
                 <a href="login.html" class="btn btn-outline">Login</a>
@@ -1462,11 +1387,10 @@
             <!-- Mobile Menu -->
             <div class="mobile-menu" id="mobileMenu">
                 <ul class="mobile-nav-links">
-                    <li><a href="#home" onclick="closeMobileMenu()">Home</a></li>
-                    <li><a href="#services" onclick="closeMobileMenu()">Services</a></li>
-                    <li><a href="#how-it-works" onclick="closeMobileMenu()">How it Works</a></li>
-                    <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
-                    <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+                    <li><a onclick="scrollToSection('home'); closeMobileMenu()">Home</a></li>
+                    <li><a onclick="scrollToSection('services'); closeMobileMenu()">Services</a></li>
+                    <li><a onclick="scrollToSection('how-it-works'); closeMobileMenu()">How it Works</a></li>
+                    <li><a onclick="scrollToSection('contact'); closeMobileMenu()">Contact</a></li>
                 </ul>
                 <div class="mobile-cta-buttons">
                     <a href="login.html" class="btn btn-outline">Login</a>
@@ -1495,7 +1419,7 @@
                 <p>Connect with verified professionals for all your service needs. From home repairs to personal care, we've revolutionized how you find and book trusted experts in your area.</p>
                 
                 <div class="hero-cta">
-                    <a href="#services" class="btn-hero btn-hero-primary">
+                    <a onclick="scrollToSection('services')" class="btn-hero btn-hero-primary">
                         <i class="fas fa-search"></i> Find Services
                     </a>
                     <a href="register.html" class="btn-hero btn-hero-secondary">
@@ -1569,7 +1493,7 @@
                     
                     <div class="service-preview interactive-hover">
                         <div class="service-image">
-                            <img src="https://images.unsplash.com/photo-1632823469850-b47c3b8580a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Professional automotive repair services" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Professional automotive repair services" loading="lazy">
                             <div class="service-overlay">
                                 <div class="service-icon">
                                     <i class="fas fa-car"></i>
@@ -1708,7 +1632,7 @@
 
                 <div class="category-card fade-in" onclick="exploreCategory('automotive')">
                     <div class="category-image">
-                        <img src="https://images.unsplash.com/photo-1486754735734-325b5831c3ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Professional automotive repair and maintenance services" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Professional automotive repair and maintenance services" loading="lazy">
                         <div class="category-overlay">
                             <div class="category-icon">
                                 <i class="fas fa-car-side"></i>
@@ -1750,61 +1674,6 @@
                     <div class="step-number pulse">3</div>
                     <h3>Experience & Pay</h3>
                     <p>Receive exceptional service from our verified professionals. Pay securely through our platform, track service progress in real-time, and leave reviews to help build our community.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="section-header">
-                <h2>About Sewa</h2>
-                <p>Revolutionizing the service industry with trust, quality, and innovation at our core</p>
-            </div>
-
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Our Mission</h3>
-                    <p>At Sewa, we're on a mission to transform how people access and deliver services. We believe everyone deserves access to quality, reliable services while providing service providers with the tools and platform they need to grow their business.</p>
-                    
-                    <p>Founded in 2020, we've grown from a small startup to the world's leading service marketplace, connecting millions of customers with trusted professionals across hundreds of service categories.</p>
-                    
-                    <p>Our commitment to excellence, security, and customer satisfaction has made us the preferred choice for both service seekers and providers worldwide.</p>
-                </div>
-
-                <div class="about-features">
-                    <div class="feature">
-                        <div class="feature-icon">
-                            <i class="fas fa-shield-check"></i>
-                        </div>
-                        <h4>Verified Professionals</h4>
-                        <p>Every service provider undergoes thorough background checks and verification</p>
-                    </div>
-
-                    <div class="feature">
-                        <div class="feature-icon">
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h4>Quality Guarantee</h4>
-                        <p>We ensure exceptional service quality with our satisfaction guarantee program</p>
-                    </div>
-
-                    <div class="feature">
-                        <div class="feature-icon">
-                            <i class="fas fa-headset"></i>
-                        </div>
-                        <h4>24/7 Support</h4>
-                        <p>Round-the-clock customer support to assist you whenever you need help</p>
-                    </div>
-
-                    <div class="feature">
-                        <div class="feature-icon">
-                            <i class="fas fa-lock"></i>
-                        </div>
-                        <h4>Secure Platform</h4>
-                        <p>Advanced security measures protect your data and payment information</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1910,7 +1779,7 @@
                 <p>Join over 50,000 satisfied customers who trust Sewa for their premium service needs. Start your journey today!</p>
                 
                 <div class="cta-buttons-section">
-                    <a href="#services" class="btn-cta btn-cta-primary">
+                    <a onclick="scrollToSection('services')" class="btn-cta btn-cta-primary">
                         <i class="fas fa-rocket"></i> Find Services Now
                     </a>
                     <a href="register.html" class="btn-cta btn-cta-secondary">
@@ -1966,11 +1835,11 @@
 
                 <div class="footer-section">
                     <h3>For Customers</h3>
-                    <a href="#services">Browse All Services</a>
-                    <a href="#how-it-works">How It Works</a>
+                    <a onclick="scrollToSection('services')">Browse All Services</a>
+                    <a onclick="scrollToSection('how-it-works')">How It Works</a>
                     <a href="login.html">My Bookings</a>
-                    <a href="#contact">Customer Support</a>
-                    <a href="#contact">Help Center</a>
+                    <a onclick="scrollToSection('contact')">Customer Support</a>
+                    <a onclick="scrollToSection('contact')">Help Center</a>
                     <a href="#">Mobile App</a>
                 </div>
 
@@ -1979,18 +1848,18 @@
                     <a href="register.html">Become a Provider</a>
                     <a href="login.html">Provider Dashboard</a>
                     <a href="#">Resources & Tools</a>
-                    <a href="#contact">Provider Support</a>
+                    <a onclick="scrollToSection('contact')">Provider Support</a>
                     <a href="#">Provider App</a>
                     <a href="#">Success Stories</a>
                 </div>
 
                 <div class="footer-section">
                     <h3>Company</h3>
-                    <a href="#about">About Sewa</a>
+                    <a onclick="scrollToSection('home')">About Sewa</a>
                     <a href="#">Careers</a>
                     <a href="#">Press & Media</a>
                     <a href="#">Investors</a>
-                    <a href="#contact">Contact Us</a>
+                    <a onclick="scrollToSection('contact')">Contact Us</a>
                     <a href="#">Blog</a>
                 </div>
             </div>
@@ -2013,19 +1882,16 @@
         let statsAnimated = false;
         let currentUser = null;
 
-        // Smooth Scrolling Enhancement
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+        // Smooth Scrolling to Sections
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
 
         // Enhanced Navbar Scroll Effect
         window.addEventListener('scroll', () => {
@@ -2079,8 +1945,8 @@
             showNotification(`Loading ${category.replace('-', ' ')} services...`, 'info');
             setTimeout(() => {
                 // In a real app, this would redirect to services page with category filter
-                window.location.href = `services.html?category=${category}`;
-            }, 500);
+                showNotification(`${category.replace('-', ' ')} services coming soon!`, 'success');
+            }, 1500);
         }
 
         // Contact Form Handler
@@ -2159,7 +2025,7 @@
         }, observerOptions);
 
         // Observe elements for animation
-        document.querySelectorAll('.category-card, .step, .service-preview, .hero-stats, .feature').forEach(el => {
+        document.querySelectorAll('.category-card, .step, .service-preview, .hero-stats').forEach(el => {
             observer.observe(el);
         });
 
@@ -2269,7 +2135,7 @@
             // Initialize smooth scroll behavior
             document.documentElement.style.scrollBehavior = 'smooth';
 
-            // Show welcome message
+            // Show welcome message after a delay
             setTimeout(() => {
                 showNotification('Welcome to Sewa - The Future of Services!', 'success');
             }, 2000);
@@ -2278,6 +2144,16 @@
         // Keyboard Navigation Support
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && isMenuOpen) {
+                closeMobileMenu();
+            }
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            
+            if (isMenuOpen && !mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
                 closeMobileMenu();
             }
         });
